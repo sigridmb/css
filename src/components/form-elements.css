@@ -143,7 +143,7 @@
         }
 
         &:focus-visible + label {
-            outline: 2px solid var(--f-honkgreen-600);
+            outline: 2px solid var(--f-aqua-400);
             outline-offset: 1px;
         }
     }
@@ -161,7 +161,7 @@
 
         &:indeterminate:hover + label:before {
             @media (min-width: 990px)  {
-                @apply bg-honkgreen-100 border-honkburgundy-800;
+                @apply bg-honkburgundy-500 border-honkburgundy-800;
             }
         }
     }
@@ -185,7 +185,7 @@
             background-image: none;
 
         &:indeterminate:hover + label:before {
-            @apply hover:bg-honkgreen-100 hover:ring-2;
+            @apply hover:bg-honkburgundy-500 hover:ring-2;
         }
     }
 
@@ -213,6 +213,9 @@
 .segment-control {
     @apply inline-flex relative font-bold rounded-8;
 
+    &:focus-within {
+        box-shadow: 0 0 0 1px var(--f-white), 0 0 0 3px var(--f-aqua-400);
+    }
     @nest .is-disabled &, &.segment-control--is-disabled {
         & .segment-control__item, & label {
             @apply bg-honkgray-200 border-honkgray-200 text-honkgray-300 pointer-events-none;
