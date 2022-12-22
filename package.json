@@ -1,17 +1,23 @@
 {
-  "name": "@fabric-ds/css",
+  "name": "@honk-ds/css",
   "description": "Fabric CSS core components and utilities",
-  "version": "1.1.3",
+  "version": "0.0.40",
   "files": [
     "dist",
-    "src/utils/tailwind",
-    "src/utils/component-classes"
+    "src"
   ],
-  "style": "dist/fabric.min.css",
+  "type": "module",
+  "style": "dist/honk.min.css",
   "exports": {
-    ".": "./dist/fabric.min.css",
+    ".": "./dist/honk.min.css",
     "./tailwind-config": "./src/utils/tailwind/tailwind.config.js",
-    "./component-classes": "./src/utils/component-classes/index.js"
+    "./component-classes": "./src/utils/component-classes/index.js",
+    "./component-classes/list.js": "./src/utils/component-classes/list.js",
+    "./base.css": "./src/base.css",
+    "./components.css": "./src/components.css",
+    "./utilities.css": "./src/utilities.css",
+    "./theme.css": "./src/theme.css",
+    "./colors.js": "./src/utils/tailwind/colors.js"
   },
   "typesVersions": {
     "*": {
@@ -23,8 +29,8 @@
   "scripts": {
     "eik:login": "npx @eik/cli login",
     "eik:publish": "npx @eik/cli publish",
-    "eik:alias": "eik package-alias @fabric-ds/css",
-    "build": "NODE_ENV=production postcss src/fabric.css --o dist/fabric.min.css && tsc",
+    "eik:alias": "eik package-alias @honk-ds/css",
+    "build": "NODE_ENV=production postcss src/fabric.css --o dist/honk.min.css && tsc",
     "postbuild": "./src/scripts/replaceTailwindVariables.mjs && ./src/scripts/reportSizes.mjs",
     "dev": "vite",
     "docs": "vite build && cp CNAME site",
@@ -77,7 +83,7 @@
   "eik": {
     "server": "https://assets.finn.no",
     "files": {
-      "fabric.min.css": "./dist/fabric.min.css"
+      "honk.min.css": "./dist/honk.min.css"
     }
   },
   "config": {

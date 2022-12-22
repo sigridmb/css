@@ -1,22 +1,10 @@
-@font-face {
-    font-family: "Finntype";
-    src: url("https://static.finncdn.no/_c/static/fonts/FINNTypeStrippet-Light.woff2") format("woff2"),
-        url("https://static.finncdn.no/_c/static/fonts/FINNTypeStrippet-Light.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+@import url("https://use.typekit.net/qhp8ajm.css");
 
-@font-face {
-    font-family: "Finntype";
-    src: url("https://static.finncdn.no/_c/static/fonts/FINNTypeStrippet-Medium.woff2") format("woff2"),
-        url("https://static.finncdn.no/_c/static/fonts/FINNTypeStrippet-Medium.woff") format("woff");
-    font-weight: bold;
-    font-style: normal;
-}
 
 body {
     /* Trickery: resets a more sensible default font-size */
-    @apply bg-white text-gray-700 text-16;
+    @apply bg-white text-gray-500 text-16;
     /* Always stretch body to fill the width, this makes the behaviour of the scrollbar a little nicer in some cases */
     min-height: 100%;
     /* Always show Scrollbar to prevent content jumping in certain situations (dynamic loading etc) */
@@ -28,26 +16,72 @@ dd {
     margin: 0 16px;
 }
 
-h1,
-h2,
-h3,
+h1{
+    @apply text-honkburgundy-800;
+    margin: 0 0 8px 0;
+    font-family: moret, serif;
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 400;
+
+    @media (max-width: 479px) {
+        font-size: 34px;
+        line-height: 41px;
+    }
+}
+h2 {
+    @apply text-honkburgundy-800;
+    margin: 0 0 8px 0;
+    font-family: moret, serif;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 400;
+}
+h3 {
+    @apply text-honkburgundy-800;
+    font-family: Inter, serif;
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+}
 h4,
 h5,
 ul,
 ol,
 dl,
-p,
 blockquote {
+    @apply text-honkburgundy-800;
     margin: 0 0 8px 0;
+    font-family: Inter, serif;
+}
+
+div,
+label,
+span {
+    @apply text-honkburgundy-800;
+    font-family: Inter, serif;
 }
 
 /*
-  * Default anchor styles 
+  * Default anchor styles
   */
 a {
-    @apply text-blue-600;
+    @apply text-honkburgundy-800;
     @apply cursor-pointer;
-    @apply no-underline;
+    @apply underline;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+}
+p {
+    @apply text-honkburgundy-800;
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 22px;
+    margin: 0 0 8px 0;
 }
 
 a:active,
@@ -61,7 +95,7 @@ a:hover {
   */
 b,
 strong {
-    font-weight: 700;
+    font-weight: 500;
 }
 
 /* Used to be part of normalize.css */
@@ -98,9 +132,13 @@ body:not(:-moz-handler-blocked) fieldset {
     display: table-cell;
 }
 
+.text-15 {
+    font-size: 15px;
+}
+
 /* Ensure font styling gets appended to the DOM and SDOM */
 html,
 :host {
-    font-family: Finntype, Arial, Helvetica, sans-serif;
+    font-family: moret, Inter, Arial, Helvetica, sans-serif;
     line-height: 1.5;
 }

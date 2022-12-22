@@ -1,8 +1,8 @@
-const { colors: colorSpec } = require('./colors');
-const focusRing = require('./focus-ring');
-const headings = require('./headings');
-const transitionGpu = require('./transition-gpu');
-const aspectRatio = require('@tailwindcss/aspect-ratio');
+import { colors as colorSpec } from './colors.js'
+import focusRing from './focus-ring.js'
+import headings from './headings.js'
+import transitionGpu from './transition-gpu.js'
+import aspectRatio from '@tailwindcss/aspect-ratio'
 
 const colors = Object.entries(colorSpec).reduce((acc, [colorName, colorObjectOrString]) => {
     acc[colorName] = {};
@@ -24,7 +24,7 @@ const shadows = {
     none: 'none',
 };
 
-module.exports = {
+export default {
     darkMode: false,
     purge: false,
     plugins: [focusRing, headings, transitionGpu, aspectRatio],
@@ -99,6 +99,7 @@ module.exports = {
             28: '28px',
             34: '34px',
             41: '41px',
+            70: '70px'
         },
         maxWidth: (theme, { breakpoints }) => ({
             none: 'none',
@@ -119,6 +120,8 @@ module.exports = {
             4: '4px',
             8: '8px',
             16: '16px',
+            20: '20px',
+            30: '30px',
             full: '9999px',
         },
         colors,
@@ -135,9 +138,9 @@ module.exports = {
         // Typography
         textColor: {
             ...colors,
-            primary: colors.gray['700'],
+            primary: colors.honkburgundy['800'],
             secondary: colors.gray['500'],
-            danger: colors.red['600'],
+            danger: colors.honkred['800'],
         },
         fontSize: {
             12: ['12px', '16px'],
@@ -146,10 +149,12 @@ module.exports = {
             22: ['22px', '28px'],
             28: ['28px', '34px'],
             34: ['34px', '41px'],
+            60: ['60px', '70px'],
         },
         fontWeight: {
+            small: 300,
             normal: 400,
-            bold: 700,
+            bold: 500,
         },
         // Effects
         boxShadow: {
@@ -204,7 +209,6 @@ module.exports = {
         flexShrink: ['responsive'],
         flexWrap: ['responsive'],
         float: [],
-        maxWidth: [],
         // Typography
         fontStyle: [],
         fontSmoothing: [],
@@ -245,7 +249,6 @@ module.exports = {
         textColor: ['hover', 'focus', 'group-hover'],
         textDecoration: ['hover', 'focus'],
         textOverflow: [],
-        textTransform: [],
         transform: [],
         transformOrigin: [],
         transitionDelay: [],

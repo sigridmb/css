@@ -12,8 +12,8 @@ export const attention = {
 export const pageIndicator = {
     wrapper: 'flex space-x-8 p-8',
     dot: 'h-8 w-8 rounded-full',
-    inactive: 'bg-bluegray-300',
-    active: 'bg-blue-600',
+    inactive: 'bg-honkburgundy-800',
+    active: 'bg-honkburgundy-800',
 };
 
 export const ribbon = {
@@ -24,7 +24,8 @@ export const ribbon = {
     error: 'border-red-100 bg-red-100',
     disabled: 'border-bluegray-300 bg-bluegray-300',
     sponsored: 'border-aqua-200 bg-aqua-200',
-    neutral: 'border-bluegray-300 bg-white',
+    neutral: 'border-gray-100 bg-gray-100',
+    outlined: 'border-bluegray-300 bg-white',
 };
 
 export const slider = {
@@ -41,14 +42,14 @@ export const slider = {
 export const modal = {
     backdrop:
         'f-modal-backdrop fixed inset-0 flex sm:place-content-center sm:place-items-center items-end z-20',
-    modal: 'f-modal rounded-8 mx-0 sm:mx-16 bg-white flex flex-col overflow-hidden outline-none space-y-16 pt-8 sm:pt-32 sm:pb-32 rounded-b-0 sm:rounded-b-8',
+    modal: 'f-modal mx-16 sm:mx-16 flex flex-col overflow-hidden outline-none space-y-16 pt-8 sm:pt-32 sm:pb-32',
     content:
         'block overflow-y-auto overflow-x-hidden last-child:mb-0 flex-grow flex-shrink px-16 sm:px-32 relative',
     footer: 'flex justify-end flex-shrink-0 px-16 sm:px-32',
     transitionTitle: 'transition-all duration-300',
     title: '-mt-4 sm:-mt-8 h-40 sm:h-48 grid f-grid gap-8 sm:gap-16 f-modal-title items-center px-16 sm:px-32 border-b sm:border-b-0 flex-shrink-0',
     titleText: 'mb-0 h4 sm:h3',
-    titleButton: 'button button--pill f-modal-title-button',
+    titleButton: 'button button--exit',
     titleButtonLeft: '-ml-8 sm:-ml-12',
     titleButtonRight: '-mr-8 sm:-mr-12',
     titleButtonIcon: 'h-16 w-16 sm:h-24 sm:w-24',
@@ -71,18 +72,18 @@ export const step = {
     stepDotVerticalRight: 'col-start-2',
     stepDotHorizontal: 'row-start-2 justify-self-end',
 
-    stepDotActive: 'border-blue-600 bg-white',
-    stepDotComplete: 'border-blue-600 bg-blue-600',
-    stepDotIncomplete: 'border-bluegray-300 bg-white',
+    stepDotActive: 'border-honkburgundy-800 bg-honkburgundy-800 text-honkburgundy-800',
+    stepDotComplete: 'border-honkburgundy-800 bg-honkburgundy-800 text-white',
+    stepDotIncomplete: 'border-honkburgundy-800 bg-white text-white',
 
-    stepLine: 'step-line transition-colors duration-300',
+    stepLine: 'step-line bg-honkburgundy-800 duration-300',
     stepLineVertical: 'w-2 h-full justify-self-center',
     stepLineVerticalLeft: '',
     stepLineVerticalRight: 'col-start-2',
     stepLineHorizontal: 'h-2 w-full row-start-2',
 
-    stepLineIncomplete: 'bg-bluegray-300',
-    stepLineComplete: 'bg-blue-600',
+    stepLineIncomplete: 'bg-honkburgundy-800',
+    stepLineComplete: 'bg-honkburgundy-800',
 
     content: 'last-child:mb-0',
     contentVertical: 'row-span-2 pb-32',
@@ -122,12 +123,12 @@ export const toaster = {
 };
 
 export const toast = {
-    toastWrapper: 'overflow-hidden w-full',
+    toastWrapper: 'relative overflow-hidden w-full',
     toast: 'toast flex group p-8 mt-16 rounded-8 border-2 w-full pointer-events-auto transition-all',
-    toastPositive: 'bg-green-50 border-green-200 text-green-800',
-    toastWarning: 'bg-yellow-50 border-yellow-200 text-yellow-800',
-    toastNegative: 'bg-red-50 border-red-200 text-red-800',
-    toastNeutral: 'bg-gray-50 border-gray-200 text-gray-800',
+    toastPositive: 'bg-green-50 border-green-300 text-green-800',
+    toastWarning: 'bg-yellow-50 border-yellow-300 text-yellow-800',
+    toastNegative: 'bg-red-50 border-red-300 text-red-800',
+    toastNeutral: 'bg-gray-50 border-gray-300 text-gray-800',
     toastIcon: 'flex-shrink-0 rounded-full w-16 h-16 m-8',
     toastIconPositive: 'bg-green-300',
     toastIconWarning: 'bg-yellow-300',
@@ -149,14 +150,14 @@ export const tab = {
     tab: 'grid f-grid items-center gap-8 focus-ring font-normal antialias p-16 pb-4 hover:underline f-tab',
     tabActive: 'active-tab',
     tabContained: 'rounded-t-8',
-    tabContainedActive: 'bg-aqua-50',
+    tabContainedActive: 'bg-transparent',
     icon: 'mx-auto ',
     iconUnderlined: 'f-tab-icon',
-    iconUnderlinedActive: 'text-blue-600',
+    iconUnderlinedActive: 'text-honkburgundy-800',
     iconUnderlinedInactive: 'text-gray-300',
     contentUnderlined: 'font-bold content-underlined', // content-underlined is a no-op that prevents a quirk in how Vue handles class bindings
     contentUnderlinedInactive: 'text-gray-500 f-tab-text',
-    contentUnderlinedActive: 'text-blue-600',
+    contentUnderlinedActive: 'text-honkburgundy-800',
     contentContainedActive: 'font-bold',
 };
 
@@ -165,24 +166,24 @@ export const buttonReset =
 
 export const expandable = {
     expandable: 'f-expandable',
-    expandableInfo: 'bg-aqua-50',
+    expandableInfo: 'bg-honkgreen-100',
     expandableBox: 'py-0 px-0 ' + box.box,
     expandableBleed: box.bleed,
-    chevron: 'inline-block align-middle transform transition-transform',
+    chevron: 'inline-block align-middle transform transition-transform transition-gpu',
     chevronNonBox: 'relative left-8',
     chevronBox: 'f-expandable-chevron absolute right-16',
     chevronExpanded: '-rotate-180',
     button: buttonReset + ' hover:underline focus:underline',
     buttonBox: 'w-full text-left relative ' + box.box,
-    buttonInfo: 'hover:text-aqua-700 active:text-aqua-800',
+    buttonInfo: 'hover:text-honkburgundy-800',
 };
 
 const prefixSuffixWrapperBase =
-    'absolute top-0 bottom-0 hover:text-aqua-400 flex justify-center items-center focus-ring ';
+    'absolute top-0 bottom-0 hover:text-honkorange-400 flex justify-center items-center focus-ring p-16 ';
 
 export const suffix = {
     wrapper: prefixSuffixWrapperBase + 'right-0',
-    wrapperWithLabel: 'w-max pr-12',
+    wrapperWithLabel: 'w-max pr-16',
     wrapperWithIcon: 'w-40',
     label: 'field-label pb-0 text-12',
 };
