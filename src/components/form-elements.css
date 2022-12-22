@@ -132,9 +132,14 @@
             @apply border border-honkburgundy-800 absolute block transition-all left-0 w-20 h-20 h-20 top-2;
             content: "";
         }
+        @media (min-width: 990px) {
+            &:hover + label:before {
+                @apply border-honkburgundy-800 bg-honkburgundy-500;
+            }
+        }
 
         &:focus + label {
-            outline: 2px solid var(--f-honkgreen-300);
+            outline: 2px solid var(--f-aqua-400);
             outline-offset: 1px;
         }
 
@@ -158,12 +163,6 @@
             @apply border-honkburgundy-800;
             border-width: 6px;
         }
-
-        &:indeterminate:hover + label:before {
-            @media (min-width: 990px)  {
-                @apply bg-honkburgundy-500 border-honkburgundy-800;
-            }
-        }
     }
 
     & input[type="checkbox"] {
@@ -183,9 +182,6 @@
             content: "–";
             line-height: 1.1;
             background-image: none;
-
-        &:indeterminate:hover + label:before {
-            @apply hover:bg-honkburgundy-500 hover:ring-2;
         }
     }
 
