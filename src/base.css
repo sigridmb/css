@@ -136,6 +136,11 @@ body:not(:-moz-handler-blocked) fieldset {
     font-size: 15px;
 }
 
+.text-17 {
+    font-size: 17px;
+}
+
+
 /* Ensure font styling gets appended to the DOM and SDOM */
 html,
 :host {
