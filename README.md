@@ -16,7 +16,7 @@ The CSS should be used directly from Eik. This is because we can alias releases 
 ## Usage (npm)
 
 ```sh
-npm install @fabric-ds/css
+npm install @honk-ds/css
 ```
 
 ## Development

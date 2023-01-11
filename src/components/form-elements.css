@@ -24,11 +24,11 @@
 
         &:hover {
              @apply bg-honkgreen-50;
-         }
+        }
         &:focus {
              @apply ring-1 ring-inset ring-honkburgundy-800 border-honkburgundy-800 outline-none;
              caret-color: var(--f-honkburgundy-800);
-         }
+        }
     }
 
     & label {
@@ -179,10 +179,11 @@
         }
 
         &:indeterminate + label:before {
-            @apply text-white text-center font-bold;
-            content: "–";
-            line-height: 1.1;
-            background-image: none;
+             @apply text-white text-center font-bold;
+             content: "–";
+             line-height: 1.1;
+             background-image: none;
+        }
 
         &:indeterminate:hover + label:before {
             @apply hover:bg-honkgreen-100 hover:ring-2;
