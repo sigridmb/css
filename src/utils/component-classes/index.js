@@ -47,7 +47,7 @@ export const modal = {
         'block overflow-y-auto overflow-x-hidden last-child:mb-0 flex-grow flex-shrink px-16 sm:px-32 relative',
     footer: 'flex justify-end flex-shrink-0 px-16 sm:px-32',
     transitionTitle: 'transition-all duration-300',
-    title: '-mt-4 sm:-mt-8 h-40 sm:h-48 grid f-grid gap-8 sm:gap-16 f-modal-title items-center px-16 sm:px-32 border-b sm:border-b-0 flex-shrink-0',
+    title: '-mt-4 sm:-mt-8 h-40 sm:h-48 grid f-grid gap-8 sm:gap-16 f-modal-title items-center px-16 sm:px-32 border-b border-honkburgundy-200 sm:border-b-0 flex-shrink-0',
     titleText: 'mb-0 h4 sm:h3',
     titleButton: 'button button--exit',
     titleButtonLeft: '-ml-8 sm:-ml-12',
