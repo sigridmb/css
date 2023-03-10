@@ -1,7 +1,7 @@
 {
   "name": "@honk-ds/css",
   "description": "Fabric CSS core components and utilities",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "files": [
     "dist",
     "src"
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tech-carsub/css.git"
+    "url": "git+https://github.com/tech-carsub/css.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -92,9 +92,14 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "gitHead": "7b7391f45aa2c2256f0ca89ff2d5133ec34bda9c",
   "dependencies": {
-    "@honk-ds/css": "^0.0.32",
+    "@honk-ds/css": "^0.0.45",
     "lit-html": "^2.2.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/tech-carsub/css/issues"
+  },
+  "homepage": "https://github.com/tech-carsub/css#readme",
+  "main": "build-theme.js",
+  "author": ""
 }
